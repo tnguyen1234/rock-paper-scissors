@@ -172,29 +172,6 @@ void loop()
 if (status == MI_OK)
   {
           Serial.println("RFID tag detected");
-/*Serial.print("Tag Type:\t\t");
-          uint tagType = str[0] << 8;
-          tagType = tagType + str[1];
-          switch (tagType) {
-            case 0x4400:
-              Serial.println("Mifare UltraLight");
-              break;
-            case 0x400:
-              Serial.println("Mifare One (S50)");
-              break;
-            case 0x200:
-              Serial.println("Mifare One (S70)");
-              break;
-            case 0x800:
-              Serial.println("Mifare Pro (X)");
-              break;
-            case 0x4403:
-              Serial.println("Mifare DESFire");
-              break;
-            default:
-              Serial.println("Unknown");
-              break;
-          } */
   }
 //Anti-collision, return tag serial number 4 bytes
   status = myRFID.AddicoreRFID_Anticoll(str);
@@ -338,40 +315,4 @@ if (playerOneCard == "rock" && playerTwoCard == "rock"){
 //displayResults();
 }
 
-/*
-void displayResults(){
-if(result == "playerOne") {
-    playerOneScore++;
-//light current Result LED
-if (playerOneScore == 1){
-//light LED1
-    } else if (playerOneScore == 2){
-//light LED1
-//light LED2
-    } else if (playerOneScore == 3){
-//light LED1
-//light LED2
-//light LED3
-      gameOver = true;
-    }
-  } else if (result == "playerTwo"){
-    playerTwoScore++;
-//light current Result LED
-if (playerTwoScore == 1){
-//light LED1
-    } else if (playerTwoScore == 2){
-//light LED1
-//light LED2
-    } else if (playerTwoScore == 3){
-//light LED1
-//light LED2
-//light LED3
-      gameOver = true;
-    }
-  } else if (result == "tie"){
-//light currentResult middle LED
-  } else if (result == "reset"){
-//handle all resetting, all LEDS off
-//game was reset
-  }
- */
+
